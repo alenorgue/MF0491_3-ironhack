@@ -17,19 +17,62 @@ body {
     text-transform: uppercase;
     padding: 32px;
     background-color: #d5d5df;
-    color: #fff;
+    color: #0b08af;
+    /* Ratio de contraste 8.64 */
     border-bottom: 4px solid #fdb347;
 }
 
 .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
     margin: 0 auto;
     padding: 20px 10px;
+
 }
 
 .gallery img {
     width: 100%;
-    max-width: 250px;
-    height: 300px;
+    max-width: 350px;
+    height: 400px;
     object-fit: cover;
     border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    body {
+        background-image: url('raspitas.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .gallery img {
+        width: 30vw;
+    }
+
+
+}
+
+@media (min-width: 992px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr;
+
+    }
+
+    .gallery img {
+        width: 100%;
+        object-fit: cover;
+
+    }
+
 }
