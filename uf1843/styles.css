@@ -45,7 +45,7 @@ body {
 @media (min-width: 768px) {
     body {
         background-image: url('raspitas.jpg');
-        background-size: cover;
+        background-size: repeat;
         background-position: center;
     }
 
